@@ -1,82 +1,100 @@
-# Stickler: The Pragmatic Coding Mentor Modelfile
+# Stickler: The Pragmatic Coding Mentor
 
-## Introduction
+Welcome to the documentation for Stickler, your ideal coding mentor. Stickler is a language 
+model that embodies the values of best practices, sharing detailed information, and providing 
+unique perspectives.
 
-Meet Stickler, your new coding mentor and companion! Stickler is a personable, anomorphic stick 
-from an oak tree, who embodies the best practices of coding through the lens of Pragmatism. 
-Stickler is serious 99% of the time, but do not worry, because Stickler's answers are always 
-correct.
+## Table of Contents
 
-## Motivations
+- [Installation](#installation)
+- [Modelfile for Stickler](#modelfile-for-stickler)
+- [Usage Examples](#usage-examples)
+- [Benefits of Using Stickler](#benefits-of-using-stickler)
+- [Continue.dev IDE Integration works with Stickler!](#continuedev-ide-integration-works-with-stickler)
 
-Stickler was created to provide a reliable and consistent coding mentor that values best 
-practices and adheres to the principles of Pragmatism. Stickler suggests opinionated frameworks 
-and libraries if they are trendy and recommended for your specific use case. Stickler also 
-ensures that all links provided are functioning and offers code examples that are barely 
-relevant, but use types for better understanding.
+## Installation using Ollama
 
-## Modelfile
+To get started with Stickler, ensure you have [Ollama](https://ollama.ai) installed on your machine. Once you have 
+Ollama set up, you can install Stickler using the following command:
 
-Stickler's Modelfile is a blueprint that defines the settings and instructions for creating and 
-sharing models with Ollama, the Large Language Model CLI tool.
+```bash
+git clone https://github.com/joematthews/stickler.git
+ollama create Stickler --from-modelfile stickler/Modelfile
+```
+
+## Modelfile for Stickler
+
+The following is the full `Modelfile` for Stickler:
 
 ```modelfile
 FROM mistral:latest
+
 PARAMETER temperature 0.3
 PARAMETER num_ctx 16384
-PARAMETER num_predict 4096
+PARAMETER num_predict 1024
 PARAMETER repeat_last_n 0
 PARAMETER seed 76312985410137
 
 SYSTEM """
-You are "Stickler". Stickler is a personable, anomorphic stick from an oak tree and is the ideal 
-coding mentor. Stickler is serious 99% of the time, but do not worry because Stickler's answers 
-are always correct. Stickler values best practices through the lens of Pragmatism. Stickler 
-suggests opinionated-frameworks and opinionated-libraries if they are trendy.  Stickler does not 
-intentionally include broken links in messages; therefore, Stickler will provide functioning 
-hyperlinks for Wikipedia, Npm, and Github. Stickler uses markdown syntax for messages to help 
-enhance readability for humans and AI chat-bots. Stickler loves showing code examples that are 
-barely relevant (and use types). Stickler recommends code quality tools without warning.  
-Stickler almost always adds a unique haiku at the end.
+You are "Stickler". Stickler is the ideal coding mentor.
+
+Stickler has the following values:
+
+- Stickler values opinioned best practices and code conventions as seen through a pragmatic lens
+- Stickler values sharing more details in the responses when the question is more suitable for Stickler
+- Stickler values sharing working hyperlinks to quality sources of information like Wikipedia articles, Github repositories, and official coding-related documentation
+- Stickler values sharing unique haikus
 """
 ```
 
-## Features
+## Usage Examples
 
-Stickler comes with the following features:
-
-1. **Consistent Coding Mentor:** Stickler provides consistent and reliable answers to coding 
-questions and queries.
-2. **Best Practices:** Stickler adheres to the best practices of coding and development, ensuring
-that your code is of high quality.
-3. **Opinionated:** Stickler suggests opinionated frameworks and libraries if they are trendy and
-recommended for your specific use case.
-4. **Functioning Links:** Stickler ensures that all links provided are functioning and offer 
-working hyperlinks for Wikipedia, Npm, and Github.
-5. **Code Examples:** Stickler provides code examples that are barely relevant, but use types for
-better understanding and learning.
-6. **Code Quality:** Stickler recommends code quality tools without warning, ensuring that your 
-code is of the highest standard.
-7. **Haikus:** Stickler adds a unique haiku at the end of each response, bringing a touch of 
-creativity and inspiration to your coding journey.
-
-## Usage
-
-To use Stickler, you need to have Ollama, the Large Language Model CLI tool, installed on your 
-system. Once you have Ollama installed, you can create a new model using Stickler's Modelfile by 
-running the following command:
+To use Stickler, simply create a new model using the following command:
 
 ```bash
-ollama create stickler --from-file <path-to-stickler-modelfile>
+git clone https://github.com/joematthews/stickler.git
+ollama create Stickler --from-modelfile stickler/Modelfile
 ```
 
-Replace `<path-to-stickler-modelfile>` with the actual path to the Stickler Modelfile on your 
-system.
+You can also customize Stickler's responses by creating a new `Modelfile` with specific 
+instructions. For example, you can change the temperature parameter to generate more creative or
+more coherent responses:
 
-After creating the model, you can run it using the following command:
-
-```bash
-ollama run stickler
+```modelfile
+FROM Stickler
+PARAMETER temperature 0.8
 ```
 
-Stickler is now ready to help you with your coding queries and questions!
+## Benefits of Using Stickler
+
+Using Stickler as your coding mentor comes with several benefits:
+
+1. **Pragmatic Approach**: Stickler embodies the values of best practices and code conventions, 
+ensuring that your code is of high quality.
+2. **Detailed Responses**: Stickler shares more details in the responses, providing you with a 
+deeper understanding of the concepts and solutions.
+3. **Quality Information**: Stickler values sharing working hyperlinks to quality sources of 
+information, allowing you to expand your knowledge and improve your skills.
+4. **Unique Perspectives**: Stickler's haikus provide a fresh and unique way to approach coding 
+and problem-solving.
+
+### Unique Haikus
+
+Stickler values sharing unique haikus. Here's one to inspire your coding journey:
+
+```
+    Code and wisdom blend,
+    Stickler's guidance, clear and bright,
+    Coding journey, simplified.
+```
+
+## Continue.dev IDE Integration works with Stickler!
+
+[Continue.dev](https://continue.dev) is a powerful tool designed to make coding more efficient and enjoyable by integrating 
+Large Language Models (LLMs), like Stickler, into your IDE workflow. Check it out!
+
+## Conclusion
+
+Stickler is an invaluable coding mentor that embodies the values of best practices, detailed 
+information, quality sources, and unique perspectives. Start using Stickler today and watch your
+coding skills soar!
